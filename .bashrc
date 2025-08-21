@@ -81,7 +81,7 @@ fi
 #
 if [ "$color_prompt" = yes ]; then
     # PS1="${debian_chroot:+($debian_chroot)}\033[38;5;250m\u@\h\e[0m: \033[38;5;105m\w\033[38;5;112m\$(parse_git_branch)\033[0m 🐸 " # 256-color mode only
-    PS1="${debian_chroot:+($debian_chroot)}\033[38;5;0m\u@\h\e[0m: \033[38;5;4m\w\033[38;5;2m\$(parse_git_branch)\033[0m 🐸 " # 256-color mode only
+    PS1="${debian_chroot:+($debian_chroot)}\033[38;5;5m\u@\h\e[0m: \033[38;5;4m\w\033[38;5;2m\$(parse_git_branch)\033[0m 🐸 " # 256-color mode only
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
