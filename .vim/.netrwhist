@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/entinfx/.vim'
+let g:netrw_dirhist_3='/home/entinfx/dev/personal-website/src/controllers'
+let g:netrw_dirhist_2='/home/entinfx/dev/legacy/wavebot'
+let g:netrw_dirhist_1='/home/entinfx/dev/personal-website/src/controllers'
+let g:netrw_dirhist_0='/home/entinfx/dev/learning/algorithms'
+let g:netrw_dirhist_9='/home/entinfx/dev/learning'
+let g:netrw_dirhist_8='/home/entinfx/.vim/colors'
+let g:netrw_dirhist_7='/home/entinfx/dev/personal-website/src/controllers'
+let g:netrw_dirhist_6='/home/entinfx/dev/personal-website/src'
+let g:netrw_dirhist_5='/home/entinfx/dev/personal-website'
