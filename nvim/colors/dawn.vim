@@ -1,0 +1,1 @@
+/home/entinfx/.vim/colors/dawn.vim
