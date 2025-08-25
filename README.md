@@ -9,3 +9,8 @@ Includes 2 color schemes for Vim:
 All colorscheme files are designed for a 256-color terminal. Make sure to match
 your terminal background color to the Vim background color (`ctermbg` of color
 group 'normal' in <colorscheme>.vim).
+
+## Neovim setup
+Added Neovim config files (~/.config/nvim/). Colorschemes are symlinked from
+`~/.vim/colors` to `~/.config/nvim/colors/`
+
