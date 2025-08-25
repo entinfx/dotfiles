@@ -1,4 +1,16 @@
-# Dot files and config files for my dev setup
+# Config files for my dev setup
+
+
+## Neovim setup
+
+1. [Install Neovim](https://github.com/neovim/neovim)
+2. Pull 'nvim' into `~/.config/`
+3. Install dependencies required by the Telescope plugin:
+   - [Neovim Telescope FZF](https://github.com/nvim-telescope/telescope-fzf-native.nvim).
+     This will install automatically with the Lazy plugin manager.
+   - [RipGrep](https://github.com/BurntSushi/ripgrep). This requires manual
+     installation. Try `$ sudo apt-get install ripgrep` on Debian/Ubuntu.
+
 
 ## Color schemes
 
@@ -6,11 +18,7 @@ Includes 2 color schemes for Vim:
 * Luna (dark)
 * Dawn (bright)
 
-All colorscheme files are designed for a 256-color terminal. Make sure to match
-your terminal background color to the Vim background color (`ctermbg` of color
-group 'normal' in <colorscheme>.vim).
-
-## Neovim setup
-Added Neovim config files (~/.config/nvim/). Colorschemes are symlinked from
-`~/.vim/colors` to `~/.config/nvim/colors/`
+All colorscheme files are designed for a 256-color terminal (cterm). Make sure
+to match your terminal background color to the Vim background color (`ctermbg`
+of color group `normal` in `<colorscheme>.vim`).
 

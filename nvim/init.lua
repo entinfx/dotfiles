@@ -10,6 +10,6 @@ require('config.lazy')
 
 -- Set default color scheme
 vim.o.termguicolors = false
--- vim.cmd('colorscheme luna')
-vim.cmd('colorscheme dawn')
+vim.cmd('colorscheme luna')
+-- vim.cmd('colorscheme dawn')
 
