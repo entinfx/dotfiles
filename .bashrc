@@ -70,6 +70,9 @@ fi
 # # is one of the 256 (8-bit) colors
 # To reset all colors use ESC[0m
 #
+# All non-printable sequences have to be enclosed in \[ and \], for example:
+# \[\e[38;5;5m]\]
+#
 # In 256 color mode, first 16 colors are standard 8 and high-intensity 8 colors
 # followed by 216 normal colors and 24 grayscape colors.
 #
@@ -80,8 +83,14 @@ fi
 # \w - current directory (full path)
 #
 if [ "$color_prompt" = yes ]; then
-    # PS1="${debian_chroot:+($debian_chroot)}\033[38;5;250m\u@\h\e[0m: \033[38;5;105m\w\033[38;5;112m\$(parse_git_branch)\033[0m 🐸 " # 256-color mode only
-    PS1="${debian_chroot:+($debian_chroot)}\033[38;5;5m\u@\h\e[0m: \033[38;5;4m\w\033[38;5;2m\$(parse_git_branch)\033[0m 🐸 " # 256-color mode only
+    user="\[\e[38;5;5m\]\u"
+    host="\h"
+    current_path="\[\e[38;5;4m\]\w"
+    git_branch="\[\e[38;5;2m\]\$(parse_git_branch)"
+    color_reset="\[\e[0m\]"
+
+    # PS1="${debian_chroot:+($debian_chroot)}\[\e[38;5;5m\]\u@\h\[\e[0m\]: \[\e[38;5;4m\]\w\[\e[38;5;2m\]\$(parse_git_branch)\[\e[0m\] 🐸 " # 256-color mode only
+    PS1="${debian_chroot:+($debian_chroot)}${user}@${host}: ${current_path}${git_branch}${color_reset} 🐸 " # 256-color mode only
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
