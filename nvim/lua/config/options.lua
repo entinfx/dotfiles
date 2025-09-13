@@ -64,39 +64,27 @@ local statusline = {
 
 vim.o.statusline = table.concat(statusline, '')
 
---[[
+-- Delete trailing whitespace (Vimscript)
+vim.cmd([[
+    function! <SID>StripTrailingWhitespaces()
+        let l = line(".")
+        let c = col(".")
+        %s/\s\+$//e
+        call cursor(l, c)
+    endfun
+
+    autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+]])
+
 -- Netrw
-let g:netrw_banner=0
-let g:netrw_liststyle=3
-let g:netrw_browse_split=0
-let g:netrw_keepdir=0
-let g:netrw_winsize=35
-let g:netrw_localcopydircmd='cp -r'
+-- netrw_banner = 0
+-- netrw_liststyle = 3
+-- netrw_browse_split = 0
+-- netrw_keepdir = 0
+-- netrw_winsize = 35
+-- netrw_localcopydircmd = "cp -r"
 
-" nnoremap <leader>d :Lexplore<CR> "
-" nnoremap <leader>f :Explore<CR>
-
-" NERDTree
-let g:NERDTreeWinPos="right"
-let g:NERDTreeWinSize=40
-
-nnoremap <leader>d :NERDTreeToggle<CR> " leader is set to '\'
-
-" Delete trailing whitespaces on save
-function! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
---]]
-
--- TODO
--- * Statusline
---   * Fix statusline when inactive - try tweaking the colorscheme
--- * Highlighting
---   * Highlight every instance of selected word.
---   * Highlight color codes
+-- NERDTree
+-- NERDTreeWinPos = "right"
+-- NERDTreeWinSize = 40
 

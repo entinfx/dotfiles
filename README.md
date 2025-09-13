@@ -4,7 +4,7 @@
 ## Neovim setup
 
 1. [Install Neovim](https://github.com/neovim/neovim)
-2. Pull 'nvim' into `~/.config/`
+2. Pull 'nvim/' into `~/.config/`
 3. Install dependencies required by the Telescope plugin:
    - [Neovim Telescope FZF](https://github.com/nvim-telescope/telescope-fzf-native.nvim).
      This will install automatically with the Lazy plugin manager.
@@ -16,9 +16,10 @@
 
 Includes 2 color schemes for Vim:
 * Luna (dark)
-* Dawn (bright)
+* Garden (bright)
+* Dawn (bright) - DEPRECATED
 
 All colorscheme files are designed for a 256-color terminal (cterm). Make sure
-to match your terminal background color to the Vim background color (`ctermbg`
-of color group `normal` in `<colorscheme>.vim`).
+to match your terminal background color to the Vim background color to avoid
+borders (`ctermbg` of color group `normal` in `<colorscheme>.vim`).
 
